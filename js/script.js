@@ -9,3 +9,10 @@
 
 // DOCUMENT READY FUNCTION BELOW
 
+$("button").click(function() {
+var message = $("#input").val();
+$("#userChoice").text(message);
+});
+
+
+
