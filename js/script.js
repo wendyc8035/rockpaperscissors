@@ -20,31 +20,39 @@ $("button").click(function() {
 var userchoice = $("#input").val();
 $("#userChoice").text(userchoice);
 
-var computerChoice = Math.floor(Math.random() * 3);
+var computerchoice = Math.floor(Math.random() * 3);
 
 
-if (computerChoice === 0){
-    $("#computerChoice").text("rock");
-} else if (computerChoice === 1){
-     $("#computerChoice").text("paper");
-} else if (computerChoice === 2){
+if (computerchoice === 0){
+    $("#computerChoice").text("paper");
+} else if (computerchoice === 1){
+     $("#computerChoice").text("rock");
+} else if (computerchoice === 2){
      $("#computerChoice").text("scissors");
 }
-
-      if(userchoice === computerChoice){
+      if(userchoice === computerchoice){
           $("#result").text("Tie");
-      } else if(userchoice === "rock" && computerChoice === "paper"){
-          $("#result").text("YOU LOSE!");
-      }else if(userchoice === "rock" && computerChoice === "scissors"){
+      } else if(userchoice === "rock" && computerchoice === "paper"){
+       $("#result").html("YOU LOSE!");
+       }else if(userchoice === "rock" && computerchoice === "scissors"){
+         $("#result").text("YOU WIN!");
+      }else if(userchoice === "paper" && computerchoice === "rock"){
           $("#result").text("YOU WIN!");
-      }else if(userchoice === "paper" && computerChoice === "rock"){
-          $("#result").text("YOU WIN!");
-      }else if(userchoice === "paper" && computerChoice === "scissors"){
+      }else if(userchoice === "paper" && computerchoice === "scissors"){
           $("#result").text("YOU LOSE!");
-      }else if(userchoice === "scissors" && computerChoice === "rock"){
+      }else if(userchoice === "scissors" && computerchoice === "rock"){
           $("#result").text("YOU LOSE!");
-      }else if(userchoice === "scissors" && computerChoice === "paper"){
+      }else if(userchoice === "scissors" && computerchoice === "paper"){
          $("#result").text("YOU WIN!");
       }
-      
+   
+ 
 });
+
+
+
+
+
+
+
+
